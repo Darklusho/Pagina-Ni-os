@@ -1,0 +1,26 @@
+
+  <div class="container">
+    <div class="img">
+        <h1>Division</h1>
+        <p> operación matemática que consiste en separar una cantidad en partes iguales, es decir, se trata de realizar una distribución equitativa del objeto o cosa que se quiere repartir.</p>
+        <div class="form-container">
+            <h3>Resuelve la Division</h3>
+            <p>{{ dividend }} / {{ divisor }} = ?</p>
+            <form (ngSubmit)="checkAnswer()">
+              <input
+                type="number"
+                placeholder="Tu respuesta"
+                [(ngModel)]="userAnswer"
+                name="userAnswer"
+                required
+              />
+              <button type="submit">Verificar</button>
+            </form>
+            <p *ngIf="isCorrect !== null">
+              {{ isCorrect ? '¡Correcto!' : 'Incorrecto, intenta de nuevo.' }}
+            </p>
+          </div>
+    
+    </div>
+
+</div>

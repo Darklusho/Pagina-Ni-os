@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="img">
+        <h1>Suma</h1>
+        <p>La adición o suma  es la operación matemática de composición que consiste en combinar o añadir dos números o más para obtener una cantidad final o total</p>
+        <div class="form-container">
+            <h3>Resuelve la Suma</h3>
+            <p>{{ number1 }} + {{ number2 }} = ?</p>
+            <form (ngSubmit)="checkAnswer()">
+              <input
+                type="number"
+                placeholder="Tu respuesta"
+                [(ngModel)]="userAnswer"
+                name="userAnswer"
+                required
+              />
+              <button type="submit">Verificar</button>
+            </form>
+            <p *ngIf="isCorrect !== null">
+              {{ isCorrect ? '¡Correcto!' : 'Incorrecto, intenta de nuevo.' }}
+            </p>
+          </div>
+    
+    </div>
+
+</div>

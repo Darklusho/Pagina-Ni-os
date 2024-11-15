@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="img">
+        <h1>Resta</h1>
+        <p>La resta o la sustracción es una operación aritmética que se representa con el signo (−); representa la operación de eliminación de objetos de una colección</p>
+        <div class="form-container">
+            <h3>Resuelve la Resta</h3>
+            <p>{{ number1 }} - {{ number2 }} = ?</p>
+            <form (ngSubmit)="checkAnswer()">
+              <input
+                type="number"
+                placeholder="Tu respuesta"
+                [(ngModel)]="userAnswer"
+                name="userAnswer"
+                required
+              />
+              <button type="submit">Verificar</button>
+            </form>
+            <p *ngIf="isCorrect !== null">
+              {{ isCorrect ? '¡Correcto!' : 'Incorrecto, intenta de nuevo.' }}
+            </p>
+          </div>
+    
+    </div>
+
+</div>

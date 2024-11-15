@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="img">
+        <h1>Multiplicacion</h1>
+        <p>operación matemática que consiste en encontrar el resultado de multiplicar una cifra por otra.<br> Multiplicar consiste en añadir o sumar un número varias veces, por ejemplo, la operación 2 x 3 equivale sumar tres veces el número 2, en ambas el resultado es 6</p>
+        <div class="form-container">
+            <h3>Resuelve la Multiplicacion</h3>
+            <p>{{ number1 }} * {{ number2 }} = ?</p>
+            <form (ngSubmit)="checkAnswer()">
+              <input
+                type="number"
+                placeholder="Tu respuesta"
+                [(ngModel)]="userAnswer"
+                name="userAnswer"
+                required
+              />
+              <button type="submit">Verificar</button>
+            </form>
+            <p *ngIf="isCorrect !== null">
+              {{ isCorrect ? '¡Correcto!' : 'Incorrecto, intenta de nuevo.' }}
+            </p>
+          </div>
+    
+    </div>
+
+</div>

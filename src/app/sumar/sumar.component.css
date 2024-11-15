@@ -1,0 +1,22 @@
+
+
+.container{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://png.pngtree.com/background/20210711/original/pngtree-blue-cartoon-flat-six-children-s-day-advertising-background-picture-image_1106169.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagen-fondo{
+    
+}
+
+h1{
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
